@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rifle Configurator — Risk-Part Proof of Concept</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">◎</span>
+      <div>
+        <h1>Rifle Configurator</h1>
+        <p class="tagline">True-to-scale scope &amp; mount preview for Danish hunters — proof of concept</p>
+      </div>
+    </div>
+    <p class="scale-note">Drawn to scale · 1&nbsp;SVG unit = 1&nbsp;mm of real steel</p>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: the build -->
+    <section class="panel controls" aria-label="Build controls">
+      <h2>Build</h2>
+
+      <div class="slot">
+        <div class="slot-head"><span class="slot-tag tag-rifle">Rifle</span> fixed</div>
+        <p class="slot-name" id="rifle-name"></p>
+        <p class="slot-spec" id="rifle-spec"></p>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><span class="slot-tag tag-mount">Mount</span> fixed</div>
+        <p class="slot-name" id="mount-name"></p>
+        <p class="slot-spec" id="mount-spec"></p>
+
+        <label class="slider-label" for="mount-height">
+          Mount height (what-if)
+          <output id="mount-height-value">24 mm</output>
+        </label>
+        <input type="range" id="mount-height" min="14" max="40" step="1" value="24" />
+        <p class="hint">Raises/lowers the scope. Watch clearance and the “high mount” warning respond.</p>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><span class="slot-tag tag-scope">Scope</span> pick one</div>
+        <div id="scope-options" class="options"></div>
+      </div>
+    </section>
+
+    <!-- CENTER: the compositor -->
+    <section class="panel visual" aria-label="Assembly preview">
+      <div class="visual-frame">
+        <svg id="build" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Side profile of the rifle with the selected scope and mount"></svg>
+      </div>
+      <ul class="legend">
+        <li><span class="chip chip-rifle"></span> Rifle</li>
+        <li><span class="chip chip-mount"></span> Mount</li>
+        <li><span class="chip chip-scope"></span> Scope</li>
+        <li><span class="chip chip-error"></span> Incompatible part</li>
+      </ul>
+    </section>
+
+    <!-- RIGHT: the verdict -->
+    <aside class="panel verdict" aria-label="Compatibility result">
+      <h2>Compatibility</h2>
+      <div id="verdict"></div>
+    </aside>
+  </main>
+
+  <footer class="app-footer">
+    <p>Same geometry drives the picture <em>and</em> the validation — they can never disagree.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/geometry.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

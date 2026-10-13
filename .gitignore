@@ -1,0 +1,72 @@
+# =============================================================================
+# .gitignore for the hunter-configurator repo
+#
+# The app is currently a zero-dependency static site: every file in
+# hunter-configurator/ should be COMMITTED (html, css, js, md). So there are no
+# generated artifacts to ignore yet. The rules below are the safe, always-useful
+# ones plus commented blocks you turn on when the project grows.
+# =============================================================================
+
+# --- OS junk ---------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Editors / IDEs --------------------------------------------------------
+# Uncomment the negations if you want to share workspace settings with the team.
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+
+# --- Secrets & local config ------------------------------------------------
+# Turn on the moment you add a backend or any API keys.
+.env
+.env.*
+!.env.example
+*.local
+
+# --- Logs ------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =============================================================================
+# Future tooling — uncomment the block you actually start using
+# =============================================================================
+
+# --- Node / bundler (if you add Vite, npm, etc.) ---------------------------
+# node_modules/
+# dist/
+# build/
+# .vite/
+# .cache/
+# coverage/
+
+# --- Python backend (if you add FastAPI/Flask) -----------------------------
+# __pycache__/
+# *.py[cod]
+# .venv/
+# venv/
+# .pytest_cache/
+# .mypy_cache/
+# .ruff_cache/
+
+# --- Local databases (dev only — never commit real data) -------------------
+# *.sqlite
+# *.sqlite3
+# *.db
+# pgdata/
+# *.dump
+
+# --- Data exports / large binaries you don't want in git -------------------
+# *.zip
+# exports/
+# tmp/

@@ -1,0 +1,18 @@
+# Normalise line endings: store LF in the repo, check out LF everywhere.
+# This stops Windows CRLF churn without touching autocrlf globally.
+* text=auto eol=lf
+
+# Binary assets — never normalise these
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# PowerShell scripts prefer CRLF on Windows
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
