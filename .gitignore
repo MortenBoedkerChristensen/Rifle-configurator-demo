@@ -1,10 +1,9 @@
 # =============================================================================
 # .gitignore for the hunter-configurator repo
 #
-# The app is currently a zero-dependency static site: every file in
-# hunter-configurator/ should be COMMITTED (html, css, js, md). So there are no
-# generated artifacts to ignore yet. The rules below are the safe, always-useful
-# ones plus commented blocks you turn on when the project grows.
+# hunter-configurator/ is a zero-dependency static site, so every file there is
+# committed. web/ is a Next.js sketch: source is committed, build output and
+# dependencies are not. The rules below cover both.
 # =============================================================================
 
 # --- OS junk ---------------------------------------------------------------
@@ -39,16 +38,18 @@ yarn-error.log*
 pnpm-debug.log*
 
 # =============================================================================
-# Future tooling — uncomment the block you actually start using
+# Tooling and generated artifacts
 # =============================================================================
 
-# --- Node / bundler (if you add Vite, npm, etc.) ---------------------------
-# node_modules/
-# dist/
-# build/
-# .vite/
-# .cache/
-# coverage/
+# --- Node / bundler --------------------------------------------------------
+# The Next.js sketch in web/ needs these ignored once you run npm install.
+node_modules/
+.next/
+out/
+build/
+dist/
+.turbo/
+*.tsbuildinfo
 
 # --- Python backend (if you add FastAPI/Flask) -----------------------------
 # __pycache__/

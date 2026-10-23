@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGTE — jagt &amp; optik · homepage skitse</title>
+  <meta name="description" content="Statisk preview af Next.js-forsiden. Samme markup-klasser og samme stylesheet som app/page.tsx." />
+  <link rel="stylesheet" href="../app/homepage.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Gå til indhold</a>
+
+  <!-- ===================== topbar + header ===================== -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <p>
+        <span aria-hidden="true">✦</span>
+        Fri fragt over <strong>999 kr.</strong> · Levering 1–2 hverdage med PostNord
+      </p>
+      <nav class="topbar-links" aria-label="Service">
+        <a href="#forhandlere">Find forhandler</a>
+        <a href="#nyhedsbrev">Kundeservice</a>
+        <a href="#nyhedsbrev">DA · DKK</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#top" aria-label="SIGTE — til forsiden">
+        <span class="logo-mark">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width="1.2" opacity=".55" />
+            <circle cx="16" cy="16" r="7" stroke="currentColor" stroke-width="1.2" />
+            <path d="M16 2v8M16 22v8M2 16h8M22 16h8" stroke="currentColor" stroke-width="1.2" />
+            <circle cx="16" cy="16" r="1.6" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-name">SIGTE</span>
+          <span class="logo-sub">Jagt &amp; optik</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hovedmenu">
+        <a class="nav-link" href="#kategorier">Kikkerter</a>
+        <a class="nav-link" href="#kategorier">Montager</a>
+        <a class="nav-link" href="#kategorier">Riffeltilbehør</a>
+        <a class="nav-link" href="#guides">Guides</a>
+        <a class="nav-link" href="#forhandlere">Forhandlere</a>
+        <a class="nav-cta" href="#konfigurator">
+          Konfigurator
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg>
+        </a>
+      </nav>
+
+      <details class="mobile-menu">
+        <summary>Menu</summary>
+        <div class="mobile-menu-panel">
+          <a href="#kategorier">Kikkerter</a>
+          <a href="#kategorier">Montager</a>
+          <a href="#kategorier">Riffeltilbehør</a>
+          <a href="#guides">Guides</a>
+          <a href="#forhandlere">Forhandlere</a>
+          <a href="#konfigurator"><strong>Konfigurator</strong></a>
+          <a href="#nyhedsbrev">Min konto</a>
+        </div>
+      </details>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Søg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Min konto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5" /><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0" /></svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Kurv, 2 varer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg>
+          <span class="cart-count">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== hero ===================== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Dansk jagtudstyr · monteret af jægere</span>
+          <h1>Udstyr der passer. <em>Første gang.</em></h1>
+          <p class="lede">
+            Vælg kikkert, montage og riffel i vores konfigurator. Du ser samlingen i
+            1:1 målestok — og får svar på, om delene passer, før du køber.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#konfigurator">
+              Byg din opsætning
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn-ghost" href="#konfigurator">Sådan virker det</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat"><strong>1:1</strong><span>Målestok i preview</span></div>
+            <div class="stat"><strong>3.200+</strong><span>Opsætninger bygget</span></div>
+            <div class="stat"><strong>4,9 / 5</strong><span>på Trustpilot</span></div>
+          </div>
+        </div>
+
+        <aside class="build-card" aria-label="Eksempel på en kompatibel opsætning">
+          <div class="build-head">
+            <div>
+              <p class="build-kicker">Eksempel · 1:1 preview</p>
+              <p class="build-name">Nordlys V4 3–12×56</p>
+              <p class="build-spec">30 mm rør · 56 mm objektiv · Hald medium montage</p>
+            </div>
+            <span class="compat">Kompatibel</span>
+          </div>
+
+          <div class="build-canvas">
+            <span class="scale-tag">Målestok 1:1</span>
+            <svg class="schematic" viewBox="20 44 680 200" role="img" aria-labelledby="build-title build-desc">
+              <title id="build-title">Northwind Ridgeback med Nordlys V4 kikkert og Hald montage</title>
+              <desc id="build-desc">Skitse i målestok: 30 mm rør, 31,6 mm frigang mellem objektiv og løb og 81 mm øjenafstand.</desc>
+              <defs>
+                <linearGradient id="stock-wood" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#7d5934" />
+                  <stop offset="1" stop-color="#5c3e22" />
+                </linearGradient>
+                <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#565e50" />
+                  <stop offset="1" stop-color="#333a2d" />
+                </linearGradient>
+              </defs>
+
+              <line class="measure-soft" x1="196" y1="104" x2="256" y2="104" />
+              <line class="measure" x1="196" y1="92" x2="196" y2="116" />
+              <text class="measure-text-muted" x="198" y="76">ØJENAFSTAND</text>
+              <text class="measure-text" x="198" y="88">81 mm</text>
+
+              <path d="M36 198 L36 174 Q38 162 58 158 L204 153 L232 164 L236 184 L236 200 L206 204 L186 208 L176 232 L158 234 L150 214 L118 211 L74 211 L44 206 Z" fill="url(#stock-wood)" stroke="#2c1d10" stroke-width="1" />
+              <path d="M70 178 Q122 166 202 164" fill="none" stroke="#3f2a16" stroke-width="1.4" opacity=".8" />
+              <path d="M152 214 q14 6 34 5" fill="none" stroke="#3f2a16" stroke-width="1.2" opacity=".7" />
+
+              <path d="M262 199 q0 15 17 15 h18" fill="none" stroke="#2b3124" stroke-width="2.6" stroke-linecap="round" />
+              <path d="M275 199 q2 9 5 11" fill="none" stroke="#20251a" stroke-width="2" />
+
+              <rect x="232" y="166" width="182" height="35" rx="5" fill="url(#steel)" stroke="#1b1f16" />
+              <rect x="250" y="171" width="140" height="5" rx="2.5" fill="#1e2318" opacity=".7" />
+              <circle cx="318" cy="200" r="6" fill="#242a1d" stroke="#12160e" />
+              <path d="M318 200 L335 218" stroke="#2c3323" stroke-width="3.4" stroke-linecap="round" />
+              <circle cx="335" cy="218" r="3.4" fill="#3c4433" stroke="#12160e" />
+
+              <path d="M314 208 L468 199 L502 206 L502 216 L334 221 Z" fill="url(#stock-wood)" stroke="#2c1d10" stroke-width="1" />
+              <rect x="410" y="180" width="240" height="10" rx="4" fill="url(#steel)" stroke="#1b1f16" />
+              <rect x="646" y="176" width="26" height="18" rx="3" fill="#2a3024" stroke="#12160e" />
+              <line x1="652" y1="180" x2="652" y2="190" stroke="#4c5445" stroke-width="1.6" />
+              <line x1="658" y1="180" x2="658" y2="190" stroke="#4c5445" stroke-width="1.6" />
+
+              <rect x="254" y="156" width="148" height="7" rx="2" fill="#242a1e" stroke="#12160e" />
+              <rect x="286" y="148" width="94" height="9" rx="2.5" fill="#6c7365" stroke="#333a2d" />
+              <rect x="299" y="119" width="14" height="30" rx="2" fill="#6c7365" stroke="#333a2d" />
+              <rect x="359" y="119" width="14" height="30" rx="2" fill="#6c7365" stroke="#333a2d" />
+
+              <rect x="278" y="89" width="172" height="30" rx="14" fill="#14180f" stroke="#9aa58a" stroke-width="1.1" />
+              <rect x="260" y="79" width="32" height="50" rx="12" fill="#14180f" stroke="#9aa58a" stroke-width="1.1" />
+              <rect x="252" y="85" width="11" height="38" rx="5" fill="#0d100a" stroke="#78826c" />
+              <rect x="440" y="66" width="58" height="76" rx="16" fill="#14180f" stroke="#9aa58a" stroke-width="1.1" />
+              <rect x="486" y="62" width="13" height="84" rx="6" fill="#0d100a" stroke="#78826c" />
+              <ellipse class="scope-glass" cx="493" cy="104" rx="4.5" ry="23" />
+              <ellipse class="scope-glass" cx="253" cy="104" rx="3" ry="15" opacity=".55" />
+              <rect x="306" y="86" width="10" height="36" rx="4" fill="#242a1d" stroke="#78826c" />
+              <rect x="350" y="64" width="26" height="27" rx="4" fill="#1a1f14" stroke="#9aa58a" stroke-width="1.1" />
+              <rect x="356" y="54" width="14" height="12" rx="3" fill="#2a3022" stroke="#78826c" />
+              <line x1="284" y1="94" x2="432" y2="94" stroke="#b9c2a9" stroke-width="1" opacity=".22" />
+
+              <rect class="ring" x="298" y="86" width="16" height="38" rx="4" />
+              <rect class="ring" x="358" y="86" width="16" height="38" rx="4" />
+
+              <line class="measure-soft" x1="498" y1="142" x2="530" y2="142" />
+              <line class="measure-soft" x1="512" y1="180" x2="530" y2="180" />
+              <line class="measure" x1="524" y1="142" x2="524" y2="180" />
+              <line class="measure" x1="519" y1="142" x2="529" y2="142" />
+              <line class="measure" x1="519" y1="180" x2="529" y2="180" />
+              <text class="measure-text" x="536" y="158">31,6 mm</text>
+              <text class="measure-text-muted" x="536" y="170">FRIGANG</text>
+
+              <line class="measure-soft" x1="500" y1="104" x2="532" y2="104" />
+              <text class="measure-text" x="538" y="101">⌀ 30 mm</text>
+              <text class="measure-text-muted" x="538" y="113">RØR</text>
+            </svg>
+            <div class="schematic-captions" aria-hidden="true">
+              <span><b>31,6 mm</b> frigang</span>
+              <span><b>81 mm</b> øjenafstand</span>
+              <span><b>⌀ 30 mm</b> rør</span>
+            </div>
+          </div>
+
+          <div class="build-foot">
+            <div class="build-includes">
+              <span class="mini-chip">Northwind Ridgeback</span>
+              <span class="mini-chip">Hald 30 mm</span>
+              <span class="mini-chip">Nordlys V4</span>
+            </div>
+            <div class="price">
+              <strong>12.890 kr.</strong>
+              <span>Samlet pris · moms inkl.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="trust-strip">
+        <div class="wrap">
+          <ul class="trust-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h11v9H2z" /><path d="M13 10h4l3 3v3h-7" /><circle cx="6.5" cy="18" r="1.8" /><circle cx="17" cy="18" r="1.8" /></svg><span>Fri fragt over 999 kr.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 8 0 1 1 2 8" /><path d="M4 4v6h6" /></svg><span>30 dages retur</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.2 2.8 7.6 7 9.5 4.2-1.9 7-5.3 7-9.5V6l-7-3Z" /><path d="m9 12 2 2 4-4" /></svg><span>Autoriseret forhandler</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" /><path d="M3 10h18M7 15h4" /></svg><span>MobilePay &amp; kort</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 5 5.2 2 2 0 0 1 7 3Z" /></svg><span>Dansk support</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== categories ===================== -->
+    <section class="section" id="kategorier">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Sortiment</span>
+            <h2 class="section-title">Alt til riflen. Og resten af jagten.</h2>
+            <p class="section-sub">Kikkerter og montager med mål, der kan sammenlignes. Tøj og udstyr, der holder til en dansk november.</p>
+          </div>
+          <a class="section-link" href="#produkter">Se alt udstyr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></a>
+        </div>
+
+        <div class="category-grid">
+          <a class="category-card" href="#produkter">
+            <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4M17 12h4" /><rect x="6" y="9" width="12" height="6" rx="2" /><path d="M12 9V6M12 18v-3" /><circle cx="12" cy="12" r="1.4" /></svg></span>
+            <span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+            <span><span class="cat-name">Kikkerter</span><span class="cat-count">128 varer</span></span>
+          </a>
+          <a class="category-card" href="#produkter">
+            <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18" /><path d="M7 18v-5h4v5M13 18v-5h4v5" /><path d="M6 13a3 3 0 0 1 6 0M12 13a3 3 0 0 1 6 0" /></svg></span>
+            <span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+            <span><span class="cat-name">Montager &amp; ringe</span><span class="cat-count">64 varer</span></span>
+          </a>
+          <a class="category-card" href="#produkter">
+            <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 4.5a4.5 4.5 0 0 0-6 6L4 16v4h4l5.5-5.5a4.5 4.5 0 0 0 6-6L16 12l-4-4 3.5-3.5Z" /></svg></span>
+            <span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+            <span><span class="cat-name">Riffeltilbehør</span><span class="cat-count">212 varer</span></span>
+          </a>
+          <a class="category-card" href="#produkter">
+            <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4 4 6v6l3 1v7h10v-7l3-1V6l-4-2-4 3-4-3Z" /><path d="M12 7v13M9 4.5 12 7l3-2.5" /></svg></span>
+            <span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+            <span><span class="cat-name">Jagttøj</span><span class="cat-count">340 varer</span></span>
+          </a>
+          <a class="category-card" href="#produkter">
+            <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0v11H6V9Z" /><path d="M9 9V7a3 3 0 0 1 6 0v2M9 14h6v6H9z" /><path d="M4 12v4M20 12v4" /></svg></span>
+            <span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+            <span><span class="cat-name">Tasker &amp; transport</span><span class="cat-count">96 varer</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== configurator band ===================== -->
+    <section class="band" id="konfigurator">
+      <div class="wrap band-grid">
+        <div>
+          <span class="kicker">Konfigurator</span>
+          <h2 class="section-title">Se det, før du køber det.</h2>
+          <p class="section-sub">Vælg dele fra lageret, og konfiguratoren tegner opsætningen i målestok. Den tjekker rørdiameter, ringhøjde, objektivfrigang og øjenafstand — og advarer, når noget ikke passer.</p>
+
+          <ul class="check-list">
+            <li><span class="tick">✓</span><span><strong>Rør og ringe matcher</strong><small>30 mm, 34 mm eller 1" — uden gætværk.</small></span></li>
+            <li><span class="tick">✓</span><span><strong>Objektiv og løb har frigang</strong><small>Målt på den faktiske geometri, ikke en tommelfingerregel.</small></span></li>
+            <li><span class="tick">✓</span><span><strong>Øjenafstanden er rigtig</strong><small>Se hvordan kikkerten sidder, når du fører riflen til kinden.</small></span></li>
+          </ul>
+
+          <a class="btn btn-primary" href="#konfigurator">Åbn konfiguratoren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></a>
+        </div>
+
+        <div class="demo-card" aria-label="Interaktiv eksempelvisning">
+          <div class="demo-head">
+            <span>Hald 30 mm · medium</span>
+            <span class="demo-status ok" id="demo-status">Kompatibel</span>
+          </div>
+          <div class="demo-body">
+            <svg class="gap-viz" viewBox="0 0 300 88" role="img" aria-label="Kikkert med frigang til løbet">
+              <line class="gap-grid" x1="18" y1="72" x2="282" y2="72" />
+              <rect class="gap-barrel" x="24" y="72" width="252" height="7" rx="3.5" />
+              <rect class="gap-scope" id="gap-scope" x="42" y="40" width="216" height="16" rx="8" />
+              <rect class="gap-post" id="gap-post-1" x="108" y="56" width="9" height="16" />
+              <rect class="gap-post" id="gap-post-2" x="183" y="56" width="9" height="16" />
+              <line class="gap-dim" id="dim-line" x1="268" y1="56" x2="268" y2="72" />
+              <line class="gap-dim" id="dim-tick-1" x1="264" y1="56" x2="272" y2="56" />
+              <line class="gap-dim" id="dim-tick-2" x1="264" y1="72" x2="272" y2="72" />
+              <text class="gap-text" id="dim-text" x="274" y="67">31,6</text>
+            </svg>
+
+            <div class="demo-row">
+              <label for="ring-height">Ringhøjde</label>
+              <output id="ring-height-value" for="ring-height">24 mm</output>
+            </div>
+            <input id="ring-height" class="slider" type="range" min="14" max="40" step="1" value="24" />
+            <p class="demo-note">Træk i skyderen — tegning og tal følger med.</p>
+
+            <div class="demo-metrics">
+              <div class="demo-metric"><span>Frigang</span><strong id="clearance-metric">31,6 mm</strong></div>
+              <div class="demo-metric"><span>Øjenafstand</span><strong>81 mm</strong></div>
+              <div class="demo-metric"><span>Rør</span><strong>30 mm</strong></div>
+            </div>
+
+            <p class="demo-callout" id="demo-callout" aria-live="polite"><strong>Alt passer.</strong> Objektivet har 31,6 mm frigang til løbet, og øjenafstanden ligger i intervallet 75–85 mm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== products ===================== -->
+    <section class="section section-alt" id="produkter">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Populært lige nu</span>
+            <h2 class="section-title">De dele, jægere kommer tilbage efter.</h2>
+            <p class="section-sub">Alle mål er opgivet, som producenten opgiver dem — så de kan bruges i konfiguratoren.</p>
+          </div>
+          <a class="section-link" href="#kategorier">Se hele sortimentet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></a>
+        </div>
+
+        <div class="product-grid">
+          <!-- 1 -->
+          <article class="product-card">
+            <a class="product-media" href="#konfigurator" aria-label="Se Nordlys V4 3–12×56 belyst retikel">
+              <span class="product-tag brass">Mest solgt</span>
+              <svg viewBox="0 0 320 140" role="img" aria-label="Kikkert set fra siden">
+                <ellipse cx="162" cy="119" rx="92" ry="6" fill="#191c14" opacity=".1" />
+                <rect x="62" y="56" width="196" height="30" rx="15" fill="#1b1f17" stroke="#0c0e0a" />
+                <rect x="40" y="45" width="36" height="52" rx="13" fill="#1b1f17" stroke="#0c0e0a" />
+                <rect x="39" y="52" width="11" height="38" rx="5" fill="#0d100a" />
+                <ellipse cx="43" cy="71" rx="3" ry="15" fill="#7d9aa1" opacity=".45" />
+                <rect x="240" y="35" width="46" height="72" rx="17" fill="#1b1f17" stroke="#0c0e0a" />
+                <rect x="273" y="31" width="13" height="80" rx="6" fill="#0d100a" />
+                <ellipse cx="281" cy="71" rx="4.5" ry="25" fill="#7d9aa1" opacity=".85" />
+                <rect x="137" y="29" width="28" height="28" rx="4" fill="#2a3024" stroke="#0c0e0a" />
+                <rect x="144" y="19" width="14" height="12" rx="3" fill="#2a3024" stroke="#0c0e0a" />
+                <rect x="166" y="40" width="9" height="15" rx="2" fill="#2a3024" stroke="#0c0e0a" />
+                <rect x="80" y="52" width="12" height="38" rx="4" fill="#2a3024" stroke="#0c0e0a" />
+                <line x1="72" y1="62" x2="230" y2="62" stroke="#fff" stroke-opacity=".13" stroke-width="1.4" />
+                <text x="164" y="76" text-anchor="middle" fill="#8b957c" font-size="7" letter-spacing="2.4" font-family="Segoe UI, system-ui, sans-serif">NORDLYS</text>
+              </svg>
+            </a>
+            <div class="product-body">
+              <span class="product-brand">Nordlys</span>
+              <h3 class="product-name"><a href="#konfigurator">V4 3–12×56 belyst retikel</a></h3>
+              <div class="product-chips"><span class="chip">30 mm rør</span><span class="chip">56 mm objektiv</span><span class="chip">4× zoom</span></div>
+              <div class="product-foot">
+                <div class="product-price"><strong>8.495 kr.</strong><span>Moms inkl.</span></div>
+                <button class="product-add" type="button" aria-label="Læg V4 3–12×56 belyst retikel i kurven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="product-card">
+            <a class="product-media" href="#konfigurator" aria-label="Se Fjeld Vantage 2,5–10×50">
+              <svg viewBox="0 0 320 140" role="img" aria-label="Kikkert set fra siden">
+                <ellipse cx="162" cy="119" rx="92" ry="6" fill="#191c14" opacity=".1" />
+                <rect x="62" y="56" width="196" height="30" rx="15" fill="#3d3423" stroke="#2a2316" />
+                <rect x="40" y="45" width="36" height="52" rx="13" fill="#3d3423" stroke="#2a2316" />
+                <rect x="39" y="52" width="11" height="38" rx="5" fill="#0d100a" />
+                <ellipse cx="43" cy="71" rx="3" ry="15" fill="#7d9aa1" opacity=".45" />
+                <rect x="240" y="35" width="46" height="72" rx="17" fill="#3d3423" stroke="#2a2316" />
+                <rect x="273" y="31" width="13" height="80" rx="6" fill="#0d100a" />
+                <ellipse cx="281" cy="71" rx="4.5" ry="25" fill="#7d9aa1" opacity=".85" />
+                <rect x="137" y="29" width="28" height="28" rx="4" fill="#a8863f" stroke="#2a2316" />
+                <rect x="144" y="19" width="14" height="12" rx="3" fill="#a8863f" stroke="#2a2316" />
+                <rect x="166" y="40" width="9" height="15" rx="2" fill="#a8863f" stroke="#2a2316" />
+                <rect x="80" y="52" width="12" height="38" rx="4" fill="#a8863f" stroke="#2a2316" />
+                <line x1="72" y1="62" x2="230" y2="62" stroke="#fff" stroke-opacity=".13" stroke-width="1.4" />
+                <text x="164" y="76" text-anchor="middle" fill="#d8c9a2" font-size="7" letter-spacing="2.4" font-family="Segoe UI, system-ui, sans-serif">NORDLYS</text>
+              </svg>
+            </a>
+            <div class="product-body">
+              <span class="product-brand">Fjeld</span>
+              <h3 class="product-name"><a href="#konfigurator">Vantage 2,5–10×50</a></h3>
+              <div class="product-chips"><span class="chip">30 mm rør</span><span class="chip">50 mm objektiv</span><span class="chip">Let</span></div>
+              <div class="product-foot">
+                <div class="product-price"><strong>4.295 kr.</strong><span>Moms inkl.</span></div>
+                <button class="product-add" type="button" aria-label="Læg Vantage 2,5–10×50 i kurven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="product-card">
+            <a class="product-media" href="#konfigurator" aria-label="Se Hald Picatinny 30 mm montage">
+              <span class="product-tag">Passer din riffel</span>
+              <svg viewBox="0 0 320 140" role="img" aria-label="Montage med to ringe set fra siden">
+                <ellipse cx="160" cy="121" rx="96" ry="6" fill="#191c14" opacity=".1" />
+                <rect x="56" y="100" width="208" height="15" rx="3" fill="#3a4034" stroke="#20251a" />
+                <rect x="64" y="95" width="192" height="8" rx="2" fill="#4a5244" stroke="#232819" />
+                <line x1="92" y1="101" x2="92" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <line x1="132" y1="101" x2="132" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <line x1="172" y1="101" x2="172" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <line x1="212" y1="101" x2="212" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <circle cx="104" cy="70" r="33" fill="none" stroke="#2a3024" stroke-width="13" />
+                <circle cx="104" cy="70" r="33" fill="none" stroke="#8b957c" stroke-width="1.4" opacity=".35" />
+                <path d="M78 52 a 30 30 0 0 1 34 -11" fill="none" stroke="#9aa58a" stroke-width="3" opacity=".45" stroke-linecap="round" />
+                <rect x="91" y="32" width="26" height="9" rx="2" fill="#4a5244" stroke="#232819" />
+                <circle cx="97" cy="36.5" r="1.8" fill="#1b1f17" />
+                <circle cx="111" cy="36.5" r="1.8" fill="#1b1f17" />
+                <rect x="95" y="98" width="18" height="10" rx="2" fill="#3a4034" stroke="#20251a" />
+                <circle cx="216" cy="70" r="33" fill="none" stroke="#2a3024" stroke-width="13" />
+                <circle cx="216" cy="70" r="33" fill="none" stroke="#8b957c" stroke-width="1.4" opacity=".35" />
+                <path d="M190 52 a 30 30 0 0 1 34 -11" fill="none" stroke="#9aa58a" stroke-width="3" opacity=".45" stroke-linecap="round" />
+                <rect x="203" y="32" width="26" height="9" rx="2" fill="#4a5244" stroke="#232819" />
+                <circle cx="209" cy="36.5" r="1.8" fill="#1b1f17" />
+                <circle cx="223" cy="36.5" r="1.8" fill="#1b1f17" />
+                <rect x="207" y="98" width="18" height="10" rx="2" fill="#3a4034" stroke="#20251a" />
+              </svg>
+            </a>
+            <div class="product-body">
+              <span class="product-brand">Hald</span>
+              <h3 class="product-name"><a href="#konfigurator">Picatinny 30 mm montage</a></h3>
+              <div class="product-chips"><span class="chip">Medium</span><span class="chip">Stål</span><span class="chip">Passer 30 mm</span></div>
+              <div class="product-foot">
+                <div class="product-price"><strong>1.195 kr.</strong><span>Moms inkl.</span></div>
+                <button class="product-add" type="button" aria-label="Læg Picatinny 30 mm montage i kurven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="product-card">
+            <a class="product-media" href="#konfigurator" aria-label="Se Ravn Blaser 34 mm montage">
+              <span class="product-tag">Nyhed</span>
+              <svg viewBox="0 0 320 140" role="img" aria-label="Høj montage med to ringe set fra siden">
+                <ellipse cx="160" cy="121" rx="96" ry="6" fill="#191c14" opacity=".1" />
+                <rect x="56" y="100" width="208" height="15" rx="3" fill="#3a4034" stroke="#20251a" />
+                <rect x="64" y="95" width="192" height="8" rx="2" fill="#4a5244" stroke="#232819" />
+                <line x1="92" y1="101" x2="92" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <line x1="132" y1="101" x2="132" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <line x1="172" y1="101" x2="172" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <line x1="212" y1="101" x2="212" y2="114" stroke="#20251a" stroke-width="2" opacity=".7" />
+                <circle cx="104" cy="62" r="37" fill="none" stroke="#2a3024" stroke-width="13" />
+                <circle cx="104" cy="62" r="37" fill="none" stroke="#8b957c" stroke-width="1.4" opacity=".35" />
+                <path d="M76 42 a 34 34 0 0 1 38 -12" fill="none" stroke="#9aa58a" stroke-width="3" opacity=".45" stroke-linecap="round" />
+                <rect x="91" y="24" width="26" height="9" rx="2" fill="#4a5244" stroke="#232819" />
+                <circle cx="97" cy="28.5" r="1.8" fill="#1b1f17" />
+                <circle cx="111" cy="28.5" r="1.8" fill="#1b1f17" />
+                <rect x="95" y="98" width="18" height="10" rx="2" fill="#3a4034" stroke="#20251a" />
+                <circle cx="216" cy="62" r="37" fill="none" stroke="#2a3024" stroke-width="13" />
+                <circle cx="216" cy="62" r="37" fill="none" stroke="#8b957c" stroke-width="1.4" opacity=".35" />
+                <path d="M188 42 a 34 34 0 0 1 38 -12" fill="none" stroke="#9aa58a" stroke-width="3" opacity=".45" stroke-linecap="round" />
+                <rect x="203" y="24" width="26" height="9" rx="2" fill="#4a5244" stroke="#232819" />
+                <circle cx="209" cy="28.5" r="1.8" fill="#1b1f17" />
+                <circle cx="223" cy="28.5" r="1.8" fill="#1b1f17" />
+                <rect x="207" y="98" width="18" height="10" rx="2" fill="#3a4034" stroke="#20251a" />
+              </svg>
+            </a>
+            <div class="product-body">
+              <span class="product-brand">Ravn</span>
+              <h3 class="product-name"><a href="#konfigurator">Blaser 34 mm montage</a></h3>
+              <div class="product-chips"><span class="chip">Høj</span><span class="chip">Svingmontage</span><span class="chip">34 mm</span></div>
+              <div class="product-foot">
+                <div class="product-price"><strong>1.495 kr.</strong><span>Moms inkl.</span></div>
+                <button class="product-add" type="button" aria-label="Læg Blaser 34 mm montage i kurven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== guides ===================== -->
+    <section class="section" id="guides">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Viden</span>
+            <h2 class="section-title">Bliv klogere, før du skruer.</h2>
+            <p class="section-sub">Korte, konkrete guides skrevet af folk, der selv bruger udstyret i skoven — ikke af en indkøbsafdeling.</p>
+          </div>
+          <a class="section-link" href="#nyhedsbrev">Alle guides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></a>
+        </div>
+
+        <div class="guide-grid">
+          <a class="guide-card" href="#nyhedsbrev">
+            <div class="guide-art"><span class="guide-num">01</span><span class="guide-topic">Optik</span></div>
+            <div class="guide-body">
+              <h3 class="guide-title">Sådan vælger du kikkert til dansk jagt</h3>
+              <p class="guide-meta"><span>8 min. læsning</span><span class="dot" aria-hidden="true"></span><span>Af jagtredaktionen</span></p>
+            </div>
+          </a>
+          <a class="guide-card" href="#nyhedsbrev">
+            <div class="guide-art alt"><span class="guide-num">02</span><span class="guide-topic">Montage</span></div>
+            <div class="guide-body">
+              <h3 class="guide-title">30 mm eller 34 mm ringe?</h3>
+              <p class="guide-meta"><span>5 min. læsning</span><span class="dot" aria-hidden="true"></span><span>Af jagtredaktionen</span></p>
+            </div>
+          </a>
+          <a class="guide-card" href="#nyhedsbrev">
+            <div class="guide-art alt2"><span class="guide-num">03</span><span class="guide-topic">Grundviden</span></div>
+            <div class="guide-body">
+              <h3 class="guide-title">Øjenafstand: den oversete faktor</h3>
+              <p class="guide-meta"><span>6 min. læsning</span><span class="dot" aria-hidden="true"></span><span>Af jagtredaktionen</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== dealers ===================== -->
+    <section class="section dealer" id="forhandlere">
+      <div class="wrap dealer-grid">
+        <div class="dealer-copy">
+          <span class="kicker">Forhandlere</span>
+          <h2 class="section-title">Køb våben og ammunition lokalt.</h2>
+          <p>Vi sælger ikke våben eller ammunition online. Vores forhandlere hjælper med tilladelser, registrering og den sidste montering — og du kan mærke udstyret, før du beslutter dig.</p>
+
+          <ul class="dealer-list">
+            <li><span><span class="dealer-name">Jagt &amp; Hvidt</span><span class="dealer-city">Aarhus C, Danmark</span></span><span class="dealer-dist">2,4 km</span></li>
+            <li><span><span class="dealer-name">Vestjysk Våbenhandel</span><span class="dealer-city">Ringkøbing, Danmark</span></span><span class="dealer-dist">18 km</span></li>
+            <li><span><span class="dealer-name">Nordisk Optik</span><span class="dealer-city">Aalborg, Danmark</span></span><span class="dealer-dist">36 km</span></li>
+          </ul>
+
+          <a class="btn btn-dark" href="#nyhedsbrev">Find forhandler <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></a>
+        </div>
+
+        <div class="dealer-map" role="img" aria-label="Kort med forhandlere i Jylland">
+          <span class="map-pin" style="left: 63%; top: 18%"><span class="map-dot"></span><span class="map-label">Aalborg</span></span>
+          <span class="map-pin active" style="left: 58%; top: 60%"><span class="map-dot"></span><span class="map-label">Aarhus</span></span>
+          <span class="map-pin" style="left: 22%; top: 42%"><span class="map-dot"></span><span class="map-label">Ringkøbing</span></span>
+          <span class="map-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>3 forhandlere inden for 40 km</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== newsletter ===================== -->
+    <section class="newsletter" id="nyhedsbrev">
+      <div class="wrap">
+        <div class="newsletter-card">
+          <div class="newsletter-copy">
+            <h2>Jagtkalenderen og nye guides — én mail om måneden.</h2>
+            <p>Sæsonstart, lovændringer og de nye dele, der er værd at kende. Ingen tilbudsspam, ingen daglige påmindelser.</p>
+          </div>
+          <div id="newsletter-slot">
+            <form class="newsletter-form" id="newsletter-form">
+              <div class="newsletter-field">
+                <label class="sr-only" for="newsletter-email">E-mailadresse</label>
+                <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="din@mail.dk" required />
+                <button class="btn btn-primary" type="submit">Tilmeld <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></button>
+              </div>
+              <p class="newsletter-note">Ved at tilmelde dig accepterer du vores privatlivspolitik. Afmeld med ét klik.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== footer ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo" href="#top" aria-label="SIGTE — til forsiden">
+            <span class="logo-mark">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width="1.2" opacity=".55" />
+                <circle cx="16" cy="16" r="7" stroke="currentColor" stroke-width="1.2" />
+                <path d="M16 2v8M16 22v8M2 16h8M22 16h8" stroke="currentColor" stroke-width="1.2" />
+                <circle cx="16" cy="16" r="1.6" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="logo-text"><span class="logo-name">SIGTE</span><span class="logo-sub">Jagt &amp; optik</span></span>
+          </a>
+          <p>Dansk jagtudstyr med mål, der kan sammenlignes. Bygget af jægere for jægere — siden 2014.</p>
+          <div class="footer-contact">
+            <a href="mailto:hej@sigte.dk">hej@sigte.dk</a>
+            <a href="tel:+4570123456">+45 70 12 34 56</a>
+            <span>Man–fre 9–17 · Lørdag 10–14</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Butik</h3>
+          <ul><li><a href="#top">Kikkerter</a></li><li><a href="#top">Montager</a></li><li><a href="#top">Riffeltilbehør</a></li><li><a href="#top">Jagttøj</a></li><li><a href="#top">Tilbud</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h3>Vejledning</h3>
+          <ul><li><a href="#top">Konfigurator</a></li><li><a href="#top">Guides</a></li><li><a href="#top">Størrelsesguide</a></li><li><a href="#top">Kontakt</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h3>Om SIGTE</h3>
+          <ul><li><a href="#top">Om os</a></li><li><a href="#top">Forhandlere</a></li><li><a href="#top">Bæredygtighed</a></li><li><a href="#top">Jobs</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h3>Kundeservice</h3>
+          <ul><li><a href="#top">Levering</a></li><li><a href="#top">Retur &amp; bytte</a></li><li><a href="#top">Garanti</a></li><li><a href="#top">Handelsbetingelser</a></li></ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 SIGTE ApS · CVR 12 34 56 78 · Priser inkl. 25 % moms</span>
+        <ul class="pay-list" aria-label="Betalingsmuligheder">
+          <li>MobilePay</li><li>Visa</li><li>Mastercard</li><li>Apple Pay</li>
+        </ul>
+      </div>
+
+      <p class="legal-note">SIGTE sælger ikke våben, ammunition eller lyddæmpere online. Våben og ammunition formidles gennem autoriserede forhandlere efter dansk lovgivning. Køb af optik og tilbehør er ikke tilladelsespligtigt. Alle priser er i DKK inkl. 25 % moms.</p>
+    </div>
+  </footer>
+
+  <script>
+    // --- live configurator demo -------------------------------------------
+    (function () {
+      var BASE_CLEARANCE = 7.6;
+      var HIGH_MOUNT_LIMIT = 32;
+
+      var slider = document.getElementById("ring-height");
+      var output = document.getElementById("ring-height-value");
+      var metric = document.getElementById("clearance-metric");
+      var status = document.getElementById("demo-status");
+      var scope = document.getElementById("gap-scope");
+      var post1 = document.getElementById("gap-post-1");
+      var post2 = document.getElementById("gap-post-2");
+      var dimLine = document.getElementById("dim-line");
+      var dimTick1 = document.getElementById("dim-tick-1");
+      var dimTick2 = document.getElementById("dim-tick-2");
+      var dimText = document.getElementById("dim-text");
+      var callout = document.getElementById("demo-callout");
+      var viz = document.querySelector(".gap-viz");
+
+      function fmt(value) {
+        return value.toFixed(1).replace(".", ",") + " mm";
+      }
+
+      function render() {
+        var height = Number(slider.value);
+        var clearance = height + BASE_CLEARANCE;
+        var high = height > HIGH_MOUNT_LIMIT;
+        var scopeBottom = Math.min(72 - clearance, 62);
+        var scopeTop = scopeBottom - 16;
+        var mid = (scopeBottom + 72) / 2 + 3;
+
+        output.textContent = height + " mm";
+        metric.textContent = fmt(clearance);
+        dimText.textContent = clearance.toFixed(1).replace(".", ",");
+
+        scope.setAttribute("y", scopeTop);
+        post1.setAttribute("y", scopeBottom);
+        post1.setAttribute("height", 72 - scopeBottom);
+        post2.setAttribute("y", scopeBottom);
+        post2.setAttribute("height", 72 - scopeBottom);
+        dimLine.setAttribute("y1", scopeBottom);
+        dimTick1.setAttribute("y1", scopeBottom);
+        dimText.setAttribute("y", mid);
+
+        scope.classList.toggle("warn", high);
+        status.className = "demo-status " + (high ? "warn" : "ok");
+        status.textContent = high ? "Tjek kindstøtte" : "Kompatibel";
+        viz.setAttribute(
+          "aria-label",
+          "Kikkert med " + fmt(clearance) + " frigang til løbet"
+        );
+
+        callout.innerHTML = high
+          ? "<strong>Høj montage.</strong> Kindstøtten skal hæves, og øjenafstanden bliver sværere at ramme. Overvej medium ringe."
+          : "<strong>Alt passer.</strong> Objektivet har " + fmt(clearance) +
+            " frigang til løbet, og øjenafstanden ligger i intervallet 75–85 mm.";
+      }
+
+      slider.addEventListener("input", render);
+      render();
+    })();
+
+    // --- newsletter -------------------------------------------------------
+    (function () {
+      var form = document.getElementById("newsletter-form");
+      var slot = document.getElementById("newsletter-slot");
+      if (!form) return;
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        slot.innerHTML =
+          '<p class="newsletter-success" role="status">Tak! Vi har sendt en bekræftelse til din indbakke.</p>';
+      });
+    })();
+  </script>
+</body>
+</html>
