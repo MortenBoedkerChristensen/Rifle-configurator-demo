@@ -1,0 +1,99 @@
+classDiagram
+    direction LR
+
+    class Customer {
+      +UUID id
+      +string name
+      +string email
+      +string phone
+    }
+    class Address {
+      +string street
+      +string postalCode
+      +string city
+      +string country
+    }
+    class Order {
+      +UUID id
+      +DateTime createdAt
+      +OrderStatus status
+      +number totalDkk
+    }
+    class OrderLine {
+      +number quantity
+      +number unitPriceDkk
+      +number vatRate
+    }
+    class Product {
+      +string sku
+      +string name
+      +string brand
+      +number priceDkk
+      +Category category
+    }
+    class Scope {
+      +number tubeDiameterMm
+      +number objectiveDiameterMm
+      +number eyeReliefMm
+    }
+    class Mount {
+      +RailInterface railInterface
+      +number tubeDiameterMm
+      +number tubeCenterAboveRailMm
+    }
+    class Accessory {
+      +string type
+      +string size
+    }
+    class RiflePlatform {
+      +string caliber
+      +RailInterface railInterface
+      +number eyeXmm
+      +number weightKg
+    }
+    class Build {
+      +UUID id
+      +string name
+      +DateTime createdAt
+      +boolean isPublic
+    }
+    class Placement {
+      +number centerlineMm
+      +number clearanceMm
+      +number eyeReliefMm
+    }
+    class CompatibilityResult {
+      +CompatibilityStatus status
+      +string[] errors
+      +string[] warnings
+    }
+    class Dealer {
+      +string name
+      +string cvr
+      +string city
+      +boolean authorised
+    }
+    class DealerStock {
+      +number stockQty
+      +number dealerPriceDkk
+    }
+
+    Customer "1" --> "0..*" Order : places
+    Customer "1" --> "0..*" Build : saves
+    Customer "1" --> "1..*" Address : has
+    Order "1" --> "1..*" OrderLine : contains
+    OrderLine "0..*" --> "1" Product : references
+    Build "0..*" --> "1" Scope : uses
+    Build "0..*" --> "1" Mount : uses
+    Build "0..*" --> "1" RiflePlatform : uses
+    Build "1" --> "1" Placement : derives
+    Placement "1" --> "1" CompatibilityResult : yields
+    Product "1" --> "0..*" DealerStock : stocked as
+    DealerStock "0..*" --> "1" Dealer : offered by
+
+    Product <|-- Scope
+    Product <|-- Mount
+    Product <|-- Accessory
+
+    note for RiflePlatform "Catalogue and referral data only. Firearms and ammunition are not sold online."
+    note for Dealer "Authorised dealers handle firearm and ammunition sales outside the webshop."

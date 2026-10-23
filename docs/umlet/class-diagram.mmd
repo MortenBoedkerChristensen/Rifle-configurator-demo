@@ -1,0 +1,152 @@
+classDiagram
+    direction LR
+
+    class Customer {
+      -UUID id
+      -string name
+      -string email
+      -string phone
+      +placeOrder(cart) Order
+    }
+    class Order {
+      -UUID id
+      -DateTime createdAt
+      -OrderStatus status
+      -number totalDkk
+      +addLine(line) void
+      +totalWithVat() number
+    }
+    class OrderLine {
+      -number quantity
+      -number unitPriceDkk
+      -number vatRate
+      +lineTotal() number
+    }
+    class Dealer {
+      -UUID id
+      -string name
+      -string cvr
+      -string city
+      -boolean authorised
+      +handlesFirearms() boolean
+    }
+    class Product {
+      <<abstract>>
+      -string sku
+      -string name
+      -string brand
+      -number priceDkk
+      +priceWithVat() number
+      +category() Category
+    }
+    class Scope {
+      -number tubeDiameterMm
+      -number objectiveDiameterMm
+      -number ocularDiameterMm
+      -number tubeLengthMm
+      -number ocularLengthMm
+      -number objectiveLengthMm
+      -number eyeReliefMm
+      -number weightKg
+      +lengthMm() number
+      +tubeFits(mount) boolean
+    }
+    class Mount {
+      -RailInterface railInterface
+      -number tubeDiameterMm
+      -number tubeCenterAboveRailMm
+      -number ringSpanMm
+      -number footHalfLengthMm
+      -number weightKg
+      +fitsRail(rifle) boolean
+      +centerAboveBore(rifle) number
+    }
+    class Accessory {
+      -string type
+      -string size
+      +isCompatible(build) boolean
+    }
+    class RiflePlatform {
+      -string caliber
+      -RailInterface railInterface
+      -number weightKg
+      -number eyeXmm
+      -BarrelProfile barrel
+      +barrelRadiusAt(xMm) number
+    }
+    class Build {
+      -UUID id
+      -UUID ownerId
+      -string name
+      -RiflePlatform rifle
+      -Scope scope
+      -Mount mount
+      -number ringSpanMm
+      +place() Placement
+      +evaluate() CompatibilityResult
+    }
+    class Placement {
+      +number centerlineY
+      +number rearX
+      +number frontX
+      +number tubeStartX
+      +number tubeEndX
+      +number objectiveClearanceMm
+      +number eyeReliefMm
+      +objectiveCenterX() number
+    }
+    class CompatibilityResult {
+      -boolean ok
+      -CompatibilityStatus status
+      -string[] errors
+      -string[] warnings
+      -string[] passes
+      +addError(msg) void
+      +addWarning(msg) void
+    }
+    class GeometryEngine {
+      <<static>>
+      +scopeLengths(s) Lengths
+      +placeScope(r, m, s) Placement
+      +ringXs(r, m) number[]
+      +barrelRadiusAt(r, x) number
+      +evaluate(r, m, s) CompatibilityResult
+    }
+    class CompatibilityRule {
+      <<interface>>
+      +check(build, placement) Issue[]
+      +name() string
+    }
+    class CompatibilityStatus {
+      <<enumeration>>
+      COMPATIBLE
+      WARNING
+      INCOMPATIBLE
+    }
+    class RailInterface {
+      <<enumeration>>
+      PICATINNY
+      BLASER
+      WEAVER
+      DOVETAIL
+    }
+
+    Customer "1" --> "0..*" Order : places
+    Order "1" --> "1..*" OrderLine : contains
+    OrderLine "0..*" --> "1" Product : references
+    Build "0..*" --> "1" Scope : uses
+    Build "0..*" --> "1" Mount : uses
+    Build "0..*" --> "1" RiflePlatform : uses
+    Build "1" --> "1" Placement : derives
+    Placement "1" --> "1" CompatibilityResult : yields
+    Build ..> GeometryEngine : delegates
+    GeometryEngine ..> Placement : computes
+    CompatibilityResult ..> CompatibilityRule : evaluates with
+    CompatibilityResult ..> CompatibilityStatus : typed by
+
+    Product <|-- Scope
+    Product <|-- Mount
+    Product <|-- Accessory
+
+    note for Dealer "Referrals only. No order line may reference a firearm or ammunition."
+    note for CompatibilityRule "Concrete rules: RailRule, TubeRule, ObjectiveClearanceRule, EyeReliefRule, WeightRule. The first error blocks the build; warnings still allow checkout."

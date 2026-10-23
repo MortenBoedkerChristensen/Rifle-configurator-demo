@@ -8,6 +8,7 @@ configurator — with a visual preview drawn to real measurements.
 | --- | --- | --- |
 | `hunter-configurator/` | Zero-dependency proof of concept for the hard part: one geometry model drives both the SVG and the compatibility verdict. | Working |
 | `web/` | Next.js homepage sketch for the shop, with the configurator as the hero and a live ring-height demo. | Sketch |
+| `docs/umlet/` | Domain model and class diagram in UMLet, with Mermaid mirrors for quick review. | Current |
 
 ## Quick start
 
@@ -26,6 +27,18 @@ npm run dev
 ```
 
 See `web/README.md` for the design rationale and file map.
+
+## Diagrams
+
+- `docs/umlet/domain-model.uxf` — customers, orders, catalogue, dealer stock
+  and saved builds. Shows why `RiflePlatform` is not a `Product`.
+- `docs/umlet/class-diagram.uxf` — attributes, methods, the geometry engine and
+  the compatibility-rule interface.
+- `docs/umlet/*.mmd` — Mermaid mirrors that render directly on GitHub.
+
+Open the `.uxf` files in [UMLet](https://www.umlet.com/). The notation and the
+design decisions behind the two views are explained in
+`docs/umlet/README.md`.
 
 ## The idea
 
